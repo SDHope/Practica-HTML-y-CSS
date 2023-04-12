@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Resta</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="resta">
+    <body>
+        <form class="form">
+            <h1 style="color: #F3AECD">RESTA</h1>
+            <div class="input-group">
+                <span style="font-size: 20px;">Valor A</span>
+                 <input type="text" id="caja1" placeholder="">
+
+                <span style="font-size: 20px;">Valor B</span>
+                 <input type="text" id="caja2" placeholder="">
+            <hr>   
+                <span style="font-size: 20px;">Resultado</span>
+                 <input type="text" id="caja3" placeholder="">
+        </div>
+        <a href="pagina.html" style="text-decoration: none; color: aliceblue;"><button class="button button--checkout" style="background-color: #F3AECD;">Volver al inicio</a> </button>
+        <div id="aviso"></div>
+    </form>
+        <script>
+            let precio1 = document.getElementById("caja1")
+            let precio2 = document.getElementById("caja2")
+            let precio3 = document.getElementById("caja3")
+            
+            precio2.addEventListener("change", () => {
+                precio3.value = parseFloat(precio1.value) - parseFloat(precio2.value)
+    
+            })
+            
+        </script>
+        </body>
+</html>

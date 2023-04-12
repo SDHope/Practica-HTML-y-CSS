@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Suma</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="suma">
+    <script>
+        function sumar()
+{
+  const $total = document.getElementById('total');
+  let subtotal = 0;
+  [ ...document.getElementsByClassName( "monto" ) ].forEach( function ( element ) {
+    if(element.value !== '') {
+      subtotal = subtotal + parseFloat(element.value);
+    }
+  });
+  $total.value = subtotal;
+}
+    </script>
+   
+    <form class="form">
+      <h1 style="color: #9f76b9">SUMA</h1>
+            <div class="input-group">
+            <span style="font-size: 20px;">Valor A</span>
+                <input type="number" id="txt_campo_1" class="monto" onchange="sumar();" />
+
+            <span style="font-size: 20px;">Valor B</span>
+                <input type="number" id="txt_campo_2" class="monto" onchange="sumar();" />
+
+        <hr>
+            <span style="font-size: 20px;">Resultado </span>
+                <input type="number" id="total" value="0" readonly/>
+        </div>
+       
+    </div>
+    <a href="pagina.html" style="text-decoration: none; color: aliceblue;"><button class="button button--checkout" style="background-color: #b781c7;">Volver al inicio</a> </button>
+    </form>
+    
+     
+
+    
+</body>
+</html>

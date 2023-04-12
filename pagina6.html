@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Potencia</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="expo">
+    <body>
+        <form class="form">
+            <h1 style="color: #cf9e17">POTENCIA</h1>
+            <div class="input-group">
+                <span style="font-size: 20px;">Valor A</span>
+                <input type="text" id="box1" value="" onkeyup="potencia();"/>
+
+                <span style="font-size: 20px;">Valor B</span>
+                <input type="text" id="box2" value="" onkeyup="potencia();" />
+            <hr>   
+                <span style="font-size: 20px;">Resultado</span>
+                <input  type="text"  id="box3"  value=""/>
+        </div>
+        <a href="pagina.html" style="text-decoration: none; color: aliceblue;"><button class="button button--checkout" style="background-color: #cf9e17;">Volver al inicio</a> </button>
+        <div id="aviso"></div>
+    </form>
+        <script>
+            function potencia() {
+                  var txtFirstNumberValue = document.getElementById('box1').value;
+                  var txtSecondNumberValue = document.getElementById('box2').value;
+                  var result = Math.pow(txtFirstNumberValue, txtSecondNumberValue);
+  
+                 document.getElementById('box3').value= result;
+
+}
+            
+        </script>
+        </body>
+</html>

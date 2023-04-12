@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Division</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="divi">
+    <body>
+        <form class="form">
+            <h1 style="color: #cf9e17">DIVISIÓN</h1>
+            <div class="input-group">
+                <span style="font-size: 20px;">Valor A</span>
+                <input type="text" id="box1" value="" onkeyup="sum();"/>
+
+                <span style="font-size: 20px;">Valor B</span>
+                <input type="text" id="box2" value="" onkeyup="sum();" />
+            <hr>   
+                <span style="font-size: 20px;">Resultado</span>
+                <input  type="text"  id="box3"  value=""/>
+        </div>
+        <a href="pagina.html" style="text-decoration: none; color: aliceblue;"><button class="button button--checkout" style="background-color: #cf9e17;">Volver al inicio</a> </button>
+        <div id="aviso"></div>
+    </form>
+        <script>
+            function sum() {
+  var txtFirstNumberValue = document.getElementById('box1').value;
+  var txtSecondNumberValue = document.getElementById('box2').value;
+  var result = parseFloat(txtFirstNumberValue)/parseFloat(txtSecondNumberValue);
+  
+  if(!isNaN(result)) {
+    document.getElementById('box3').value= result;
+  }
+}
+            
+        </script>
+        </body>
+</html>
